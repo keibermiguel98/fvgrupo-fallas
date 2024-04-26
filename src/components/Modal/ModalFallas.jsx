@@ -1,18 +1,28 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col, FormGroup, Input } from 'reactstrap';
 import React, { useState } from 'react';
 import { collection,addDoc } from 'firebase/firestore';
-import { database } from 'database/firebase';
+import { database, app } from 'database/firebase';
+import { getStorage, ref, uploadBytes } from 'firebase/storage';
+import { v4 } from 'uuid';
+
+const storage = getStorage(app)
+
 
 export const ModalFallas=(args)=>{
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
-
 
     const fallasCollection = collection(database, "fallas")
 
     const [producto, setProducto] = useState("")
     const [cantidadSugerida, setSugerida] = useState("")
     const [existencia, setExistencia] = useState("")
+    const [file,setFile] = useState('null')
+
+    const handlePushPhoto = async (file)=>{
+     const storageRef = ref(storage,v4())
+     return await uploadBytes(storageRef,file)
+    }
 
     const handleGetInputProducto = (e)=>{
        setProducto(e.target.value)
@@ -28,7 +38,7 @@ export const ModalFallas=(args)=>{
 
     const handlePushDataFalla = async (e)=>{
       e.preventDefault()
-      setModal(!modal)
+       setModal(!modal)
     
       await addDoc(fallasCollection, 
         {medicamentos:producto,
@@ -37,6 +47,7 @@ export const ModalFallas=(args)=>{
          statusFallas:'Pendiente',
          createAt: new Date()
         })  
+        handlePushPhoto(file)
     }
 
     return(
@@ -50,6 +61,14 @@ export const ModalFallas=(args)=>{
          <ModalBody>
          <div className="pl-lg-4">
                     <Row>
+
+                    <Col lg="12">
+                        <FormGroup>
+                          <Input type='file' onChange={e=>setFile(e.target.files[0])} />
+                        </FormGroup>
+                      </Col>
+
+
                       <Col lg="12">
                         <FormGroup>
                           <label

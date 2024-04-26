@@ -61,7 +61,8 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.8.0",
     "reactstrap": "8.10.0",
-    "sass": "1.69.5"
+    "sass": "1.69.5",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "gulp": "4.0.2",
