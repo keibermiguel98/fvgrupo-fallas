@@ -12,7 +12,7 @@ export const ModalFallas=(args)=>{
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
     const fallasCollection = collection(database, "fallas")
-    const [filtrado,setFiltrado] = useState("")
+    //const [filtrado,setFiltrado] = useState("")
 
     const [producto, setProducto] = useState("")
     const [captador, setCaptador] = useState("")
@@ -27,12 +27,10 @@ export const ModalFallas=(args)=>{
      setUrl(imageUrl)
     }
   
-    const handleGetProductos = (inputValue)=>{
-      const filtra = productos.filter((valor)=>valor.toLowerCase().includes(inputValue.toLowerCase()))
-      setFiltrado(filtra)
-    }
-   
-
+    //const handleGetProductos = (inputValue)=>{
+    //  const filtra = productos.filter((valor)=>valor.toLowerCase().includes(inputValue.toLowerCase()))
+     // setFiltrado(filtra)
+    //}
     const handleGetInputFalla = (e)=>{
        setFalla(e.target.value)
     }
@@ -85,9 +83,9 @@ export const ModalFallas=(args)=>{
 
                           <Select 
                            //options={loadOption} 
-                           options={filtrado}
+                           options={productos}
                            onChange={(e)=>setProducto(e.label)}
-                           filterOption={handleGetProductos}
+                          // filterOption={handleGetProductos}
                            />
                         </FormGroup>
                       </Col>
