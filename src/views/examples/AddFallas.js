@@ -49,12 +49,10 @@ const AddFallas = () => {
               <Table className="align-items-center table-flush" responsive hover>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Existencia</th>
-                    <th scope="col">Sugerido</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Fecha</th>
+                    <th scope="col">PRODUCTO</th>
+                    <th scope="col">TIPO DE FALLA</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">CAPTADOR</th>
                     <th scope="col" />
                   </tr>
                 </thead>
@@ -80,8 +78,7 @@ const AddFallas = () => {
                       </Media>
                     </th>
 
-                    <td>{data.cantidadExistente}</td>
-                    <td>{data.cantidadSugerida}</td>
+                    <td>{data.tipoFalla}</td>
 
                     <td>
                     <Badge color="primary" pill>
@@ -91,15 +88,10 @@ const AddFallas = () => {
 
                     <td>
                       <div className="d-flex align-items-center">
-                        <span className="mr-2">{data.usuario}</span> 
+                        <span className="mr-2">{data.captador}</span> 
                       </div>
                     </td>
 
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">{data.usuarios}</span> 
-                      </div>
-                    </td>
 
                     <td className="text-right">
                       <UncontrolledDropdown>

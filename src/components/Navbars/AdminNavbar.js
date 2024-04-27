@@ -56,7 +56,7 @@ const AdminNavbar = (props) => {
                   </span>
                   <Media className="ml-2 d-none d-lg-block">
                     <span className="mb-0 text-sm font-weight-bold">
-                      Jessica Jones
+                      FV BODEGONES
                     </span>
                   </Media>
                 </Media>

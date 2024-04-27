@@ -4,20 +4,19 @@ import { collection,addDoc } from 'firebase/firestore';
 import { database, app } from 'database/firebase';
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
-
+import Select from "react-select"
+import productos from '../../productos.json'
 const storage = getStorage(app)
-
 
 export const ModalFallas=(args)=>{
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
-
     const fallasCollection = collection(database, "fallas")
+    const [filtrado,setFiltrado] = useState("")
 
     const [producto, setProducto] = useState("")
-    const [cantidadSugerida, setSugerida] = useState("")
-    const [existencia, setExistencia] = useState("")
     const [captador, setCaptador] = useState("")
+    const [falla,setFalla] = useState("")
     const [file,setFile] = useState('null')
     const [url,setUrl] = useState('')
 
@@ -26,21 +25,17 @@ export const ModalFallas=(args)=>{
      await uploadBytes(storageRef,file)
      const imageUrl = await getDownloadURL(storageRef)
      setUrl(imageUrl)
-     console.log(url)
     }
-
-    const handleGetInputProducto = (e)=>{
-       setProducto(e.target.value)
+  
+    const handleGetProductos = (inputValue)=>{
+      const filtra = productos.filter((valor)=>valor.toLowerCase().includes(inputValue.toLowerCase()))
+      setFiltrado(filtra)
     }
+   
 
-    const handleGetInputCantidadSugerida = (e)=>{
-     setSugerida(e.target.value)
+    const handleGetInputFalla = (e)=>{
+       setFalla(e.target.value)
     }
-
-     const handleGetInputExistencia = (e)=>{
-     setExistencia(e.target.value)
-    }
-
     const handleGetCaptador = (e)=>{
       setCaptador(e.target.value)
     }
@@ -51,13 +46,13 @@ export const ModalFallas=(args)=>{
        handlePushPhoto(file)
        await addDoc(fallasCollection, 
         {
+         codigo:"554",
          producto:producto,
          image: url,
-         cantidadExistente: existencia, 
-         cantidadSugerida:cantidadSugerida, 
+         tipoFalla: falla,
          statusFallas:'Pendiente',
          captador: captador,
-         createAt: new Date()
+         createAt: `${new Date()}`
         })         
     }
 
@@ -81,6 +76,24 @@ export const ModalFallas=(args)=>{
 
                       <Col lg="12">
                         <FormGroup>
+                        <label
+                            className="form-control-label"
+                            htmlFor="input-email"
+                          >
+                            Producto
+                          </label>
+
+                          <Select 
+                           //options={loadOption} 
+                           options={filtrado}
+                           onChange={(e)=>setProducto(e.label)}
+                           filterOption={handleGetProductos}
+                           />
+                        </FormGroup>
+                      </Col>
+
+                      <Col lg="12">
+                        <FormGroup>
                           <label
                             className="form-control-label"
                             htmlFor="input-captador"
@@ -90,77 +103,39 @@ export const ModalFallas=(args)=>{
                           <Input
                             onChange={handleGetCaptador}
                             value={captador}
-                            className="form-control-alternative"
+                            className="form-control"
                             id="inputcaptador"
                             placeholder="Nombre completo"
                             type="text"
                           />
                         </FormGroup>
                       </Col>
-
-
-                      <Col lg="12">
-                        <FormGroup>
-                          <label
-                            className="form-control-label"
-                            htmlFor="input-email"
-                          >
-                            Producto
-                          </label>
-                          <Input
-                            onChange={handleGetInputProducto}
-                            value={producto}
-                            className="form-control-alternative"
-                            id="input-producto"
-                            placeholder="Example: Acetaminofen 200ML"
-                            type="text"
-                          />
-                        </FormGroup>
-                      </Col>
                     </Row>
+
                     <Row>
-                      <Col lg="6">
-                        <FormGroup>
-                          <label
-                            className="form-control-label"
-                            htmlFor="input-first-name"
-                          >
-                            Existencia
-                          </label>
-                          <Input
-                            value={existencia}
-                            onChange={handleGetInputExistencia}
-                            className="form-control-alternative"
-                            id="input-existencia"
-                            placeholder="0"
-                            type="number"
-                          />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="6">
+                      <Col lg="12">
                         <FormGroup>
                           <label
                             className="form-control-label"
                             htmlFor="input-last-name"
                           >
-                            Cantidad sugerida
+                            Tipo de falla(*)
                           </label>
-                          <Input
-                            value={cantidadSugerida}
-                            onChange={handleGetInputCantidadSugerida}
-                            className="form-control-alternative"
-                            id="input-sugerencia"
-                            placeholder="0"
-                            type="number"
-                          />
+                        
+                          <select className="form-control" value={falla} onChange={handleGetInputFalla}>
+                              <option value="#">Seleccionar..</option>
+                              <option value="Sin existencia" className='text-danger'>Sin existencia</option>
+                              <option value="Poca existencia" className='text-primary'>Poca existencia</option>
+                          </select>
                         </FormGroup>
                       </Col>
                     </Row>
+
                   </div>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={handlePushDataFalla}>
-            Cargar falla
+            Enviar falla
           </Button>{''}
           <Button color="secondary" onClick={toggle}>
             Cancelar
