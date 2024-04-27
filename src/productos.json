@@ -3627,10 +3627,6 @@
   "label": "CHOCOLATE POSTRE CHOCOLATE OSCURO 200G SAVOY "
  },
  {
-  "value": "CARCOS",
-  "label": "CARNE COSTILLA FV POR PESO"
- },
- {
   "value": "SHADDECOCO",
   "label": "HELADO DE COCO SHADDE"
  },
@@ -3713,14 +3709,6 @@
  {
   "value": "CIRUELAPASAPESO",
   "label": "CIRUELA PASA IMPORTADAS POR PESO"
- },
- {
-  "value": "CARMOL",
-  "label": "CARNE MOLIDA FV"
- },
- {
-  "value": "CARLOM",
-  "label": "CARNE LOMITO FV POR PESO"
  },
  {
   "value": "340540",
@@ -3897,10 +3885,6 @@
  {
   "value": "7591127113627",
   "label": "REFRESCO COCACOLA SIN AZUCAR 2L"
- },
- {
-  "value": "CERDOTBONECAST",
-  "label": "CERDO T BONE CASTAÑO POR PESO"
  },
  {
   "value": "076808523195",
@@ -4187,25 +4171,14 @@
   "label": "CEREAL SHREDDED WHEAT ORIGINAL 464GR"
  },
  {
-  "value": "2-0017",
-  "label": "BERENJENA FV POR PESO"
- },
- {
   "value": "043000957400",
   "label": "KOOL-AID TROPICAL PUNCH  2.33KG"
- },
- {
-  "value": "CARNETOMAHAWKFV",
-  "label": "CARNE TOMAHAWK FV POR PESO"
  },
  {
   "value": "7591016605462",
   "label": "PERRARINA K-NINA  CACHORROS CARNE Y CEREALES 4KG"
  },
- {
-  "value": "2-0019",
-  "label": "BROCOLI FV POR PESO"
- },
+
  {
   "value": "20119",
   "label": "CAMBUR FV POR PESO"
@@ -4217,10 +4190,6 @@
  {
   "value": "037600105064",
   "label": "CREMA DE MANI SKIPPY NATURAL 425GR"
- },
- {
-  "value": "2-0023",
-  "label": "CEBOLLIN FV POR PESO"
  },
  {
   "value": "QUESOBARINA",
@@ -4307,20 +4276,12 @@
   "label": "COLIFLOR FV POR PESO"
  },
  {
-  "value": "2-0039",
-  "label": "ESPINACA  FV"
- },
- {
   "value": "021000643592",
   "label": "SALSA RANCH CLASSIC 237ML"
  },
  {
   "value": "021000644216",
   "label": "SALSA ZESTY ITALIAN KRAFT 237ML"
- },
- {
-  "value": "2-0050",
-  "label": "LECHUGA AMERICANA FV POR PESO"
  },
  {
   "value": "8852961010848",
@@ -4371,10 +4332,6 @@
   "label": "REFRESCO COCA COLA ORIGINAL TASTE LATA 355ML"
  },
  {
-  "value": "2-0060",
-  "label": "."
- },
- {
   "value": "798010391064",
   "label": "ACEITE DE OLIVA PREMIUM EXTRA VIRGEN  8.5OZ"
  },
@@ -4390,10 +4347,7 @@
   "value": "709862521394",
   "label": "LECHE CONDENSADA LOS ANDES 395GR"
  },
- {
-  "value": "2-0063",
-  "label": "LECHOZA FV POR PESO"
- },
+
  {
   "value": "19082172",
   "label": "GELATINA DE FRESA VITAL 160GR"
@@ -4495,10 +4449,6 @@
   "label": "BARRA BIANCHI CARAMELO Y MANI DE CHOCOLATE BLANCO 43GR"
  },
  {
-  "value": "QGALERON",
-  "label": "QUESO PASTEURIZADO GALERON POR PESO"
- },
- {
   "value": "PIÑDESHI",
   "label": "PIÑA DESHIDRATADA 25 GR"
  },
@@ -4531,10 +4481,6 @@
   "label": "PASTA SINDONI PREMIUM ESPIRAL 1KG "
  },
  {
-  "value": "KIWIFV",
-  "label": "KIWI FV POR PESO"
- },
- {
   "value": "7591164001291",
   "label": "GALLETAS CHARMY CHOCOLATE 216GR"
  },
@@ -4545,10 +4491,6 @@
  {
   "value": "7591073013439",
   "label": "RON CACIQUE VAINILLA ELECTRICA 0.70L"
- },
- {
-  "value": "PORCINO-010",
-  "label": "PORCINO ASADO DE TIRAS POR PESO"
  },
  {
   "value": "028000544652",
@@ -4821,10 +4763,6 @@
  {
   "value": "7702011273215",
   "label": "GALLETAS SURTIDAS NAVIDEÑAS COLOMBINA "
- },
- {
-  "value": "7622210426987",
-  "label": "."
  },
  {
   "value": "7622210427106",
@@ -5119,7 +5057,7 @@
   "label": "PAN DE HAMBURGUESA SUPER PAN VIVA MEJOR 600GR"
  },
  {
-  "value": "MIEL1\/2",
+  "value": "MIEL12",
   "label": "MIEL PURA LA ESMERALDA 500GR"
  },
  {
@@ -5165,10 +5103,6 @@
  {
   "value": "080878186945",
   "label": "SHAMPOO PANTENE STRENGTH RECONSTRUCTION 595ML"
- },
- {
-  "value": "POLLOPECHUGA",
-  "label": "POLLO PECHUGA FV POR PESO"
  },
  {
   "value": "75903169",
@@ -5351,24 +5285,8 @@
   "label": "CAMBUR OFERTA"
  },
  {
-  "value": "CARMENCITA",
-  "label": "CARMENCITA ESPECIAS POR PESO"
- },
- {
-  "value": "PLAOFERT",
-  "label": "PLATANO OFERTA"
- },
- {
   "value": "7622201721220",
   "label": "TAN DE PIÑA COLADA 20GR"
- },
- {
-  "value": "PIMOFERT",
-  "label": "PIMENTON OFERTA "
- },
- {
-  "value": "AJIOFER",
-  "label": "AJI  FV POR PESO"
  },
  {
   "value": "HIGOOFER",
@@ -5378,10 +5296,7 @@
   "value": "737186108359",
   "label": "PAN ARABE SHAWARMA 6UNI"
  },
- {
-  "value": "LECHOOFER",
-  "label": "LECHOZA OFERTA"
- },
+ 
  {
   "value": "7591112462020",
   "label": "PURE DE TOMATE PASSATA HEINZ 480GR"
@@ -5462,10 +5377,7 @@
   "value": "BOLSA5",
   "label": "BOLSA 5 KILOS"
  },
- {
-  "value": "PARCHOFERTA",
-  "label": "PARCHITA OFERTA"
- },
+
  {
   "value": "PANDULQUES",
   "label": "PAN DULCE CON QUESO GRANDE ANGEL DEL PAN"
@@ -5502,10 +5414,7 @@
   "value": "848974096526",
   "label": "TERMO TAL RANGER PRO NEGRO 64OZ"
  },
- {
-  "value": "POR-002",
-  "label": "PORCINO COSTILLA FV "
- },
+
  {
   "value": "012245132088",
   "label": "CEREAL CHOKO BOLITOS VENEPAN 240GR"
@@ -5539,10 +5448,6 @@
   "label": "ENVASES PLASTICOS TAPA 8OZ"
  },
  {
-  "value": "CARITE",
-  "label": "CARITE POR PESO"
- },
- {
   "value": "QUESOGOUDAMILK",
   "label": "QUESO GOUDA MILD HENRI WILLIG"
  },
@@ -5566,10 +5471,7 @@
   "value": "7581002775002",
   "label": "PAN TOSTADO CLASICO  FRESCO 70G "
  },
- {
-  "value": "CAMB878",
-  "label": "CAMBUR INVERNADERO"
- },
+ 
  {
   "value": "QPECOSORT",
   "label": "QUESO PECORINO SORTILEGIO POR PESO"
@@ -5608,7 +5510,7 @@
  },
  {
   "value": "7592632959243",
-  "label": "LEJIA\/CLORO JABONOSO TAPA AMARILLA 1 LITRO"
+  "label": "LEJIA CLORO JABONOSO TAPA AMARILLA 1 LITRO"
  },
  {
   "value": "PASTDISC",
@@ -5799,10 +5701,6 @@
   "label": "ENJUAGE BUCAL COLGATE TOTAL 12 ANTISARRO 500ML"
  },
  {
-  "value": "MORA",
-  "label": "MORA FV POR UNIDAD"
- },
- {
   "value": "816559012826",
   "label": "SHAMPOO VO5 NORMAL 370ML"
  },
@@ -5822,10 +5720,7 @@
   "value": "7591446024062",
   "label": "SANGRIA CAROREÑA ROSADA P 1.75L"
  },
- {
-  "value": "CEBOLO",
-  "label": "CEBOLLA MORADA FV POR PESO"
- },
+ 
  {
   "value": "7590005168186",
   "label": "GEL FIJADOR EVERY NIGHT FRESH 100GR"
