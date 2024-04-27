@@ -400,10 +400,6 @@
   "label": "GUASACACA CRIOLLA MEDITERRANEO 150CM"
  },
  {
-  "value": "CARBIS",
-  "label": "CARNE BISTECK FV POR PESO"
- },
- {
   "value": "7592723104408",
   "label": "SALSA PARA PASTA NAPOLITANA KIERO 200G"
  },
@@ -490,10 +486,6 @@
  {
   "value": "8999999036607",
   "label": "JABON LUX SOFT TOUCH 85GR"
- },
- {
-  "value": "2-0088",
-  "label": "."
  },
  {
   "value": "PASTELCAMOL",
@@ -613,7 +605,7 @@
  },
  {
   "value": "7591039601526",
-  "label": "MAIZINA  AMERICANA AR 90GR"
+  "label": "MAIZINA AMERICANA AR 90GR"
  },
  {
   "value": "7591982001794",
@@ -764,24 +756,12 @@
   "label": "CERVEZA LUXUS PREMIUM LATA 330ML "
  },
  {
-  "value": "PATACONFV",
-  "label": "PATACON FV"
- },
- {
   "value": "7595409000018",
   "label": "GINEBRA EDWARDS 0.70L"
  },
  {
   "value": "7591002000011",
   "label": "HARINA DE MAIZ PAN 1KG"
- },
- {
-  "value": "719503089046",
-  "label": "."
- },
- {
-  "value": "SALCHIPAPAPREMIUM",
-  "label": "SALCHIPAPA PREMIUN GOURMET FV"
  },
  {
   "value": "7594001268055",
@@ -1000,10 +980,6 @@
   "label": "CARAOTAS NEGRAS SANTA LUCIA 1KG"
  },
  {
-  "value": "HALLACA",
-  "label": "HALLACAS"
- },
- {
   "value": "8681582090126",
   "label": "GUISANTES ALDAR LATA 400GR"
  },
@@ -1125,7 +1101,7 @@
  },
  {
   "value": "676979826431",
-  "label": "CREMA DENTAL ADVANCED WHITENING C\/CEPILLO 181GR"
+  "label": "CREMA DENTAL ADVANCED WHITENING CEPILLO 181GR"
  },
  {
   "value": "7591206007540",
@@ -1245,23 +1221,23 @@
  },
  {
   "value": "7599632000098",
-  "label": "SANGRIA  BICHOTA  1.75L"
+  "label": "SANGRIA BICHOTA 1.75L"
  },
  {
   "value": "8711600555174",
-  "label": "DESODORANTE REXONA  AEROSOL SHOWER FRESH 200ML"
+  "label": "DESODORANTE REXONA AEROSOL SHOWER FRESH 200ML"
  },
  {
   "value": "8711600772595",
-  "label": "DESODORANTE REXONA  AEROSOL LINEN DRY 200ML"
+  "label": "DESODORANTE REXONA AEROSOL LINEN DRY 200ML"
  },
  {
   "value": "8712561843447",
-  "label": "DESODORANTE REXONA  AEROSOL BRIGHT BOUQUET 200ML"
+  "label": "DESODORANTE REXONA AEROSOL BRIGHT BOUQUET 200ML"
  },
  {
   "value": "8717644061725",
-  "label": "DESODORANTE REXONA  AEROSOL BIORYTHM 200ML"
+  "label": "DESODORANTE REXONA AEROSOL BIORYTHM 200ML"
  },
  {
   "value": "035000740045",
@@ -1373,7 +1349,7 @@
  },
  {
   "value": "050000301522",
-  "label": "COFFEE MATE NESTLE  311.8GR "
+  "label": "COFFEE MATE NESTLE 311.8GR "
  },
  {
   "value": "816559013121",
@@ -1648,10 +1624,6 @@
   "label": "RON FLOR DE CAÑA CENTENARIO 18 AÑOS"
  },
  {
-  "value": "7593513000207",
-  "label": "COLIFLOR SELECCIONADO 500G FV"
- },
- {
   "value": "089540448978",
   "label": "RON COCONUT MALIBU 1L"
  },
@@ -1780,10 +1752,6 @@
   "label": "CHORIZO DE TRES CARNES GINO 5UNIDAD"
  },
  {
-  "value": "7593513007558",
-  "label": "AJO SECO 1\" 1\/4 FV POR PESO"
- },
- {
   "value": "CHORICRE",
   "label": "CHORIZO DE QUESO CREMA GINO UNIDAD"
  },
@@ -1822,10 +1790,6 @@
  {
   "value": "7593513075440",
   "label": "MELOCOTON FV POR PESO"
- },
- {
-  "value": "MANGOFV",
-  "label": "MANGO FV POR PESO"
  },
  {
   "value": "7596378000146",
@@ -1944,16 +1908,8 @@
   "label": "CANELA ENTERA DOÑA DELIA 25G"
  },
  {
-  "value": "7593513001716",
-  "label": "ALBAHACA"
- },
- {
   "value": "7591446022105",
   "label": "SANGRIA CAROREÑA BLANCA P 1.75L"
- },
- {
-  "value": "7593513001723",
-  "label": "ALCACHOFA"
  },
  {
   "value": "7591985002033",
@@ -1962,10 +1918,6 @@
  {
   "value": "JAMONAHMADO",
   "label": "ESPALDA  AHUMADA  ALIBAL POR PESO"
- },
- {
-  "value": "7593513001730",
-  "label": "APIO ESPAÑA FV POR PESO"
  },
  {
   "value": "7592104000053",
@@ -2019,10 +1971,7 @@
   "value": "BOTELLONES",
   "label": "BOTELLONES 12 LITROS DE COLORES UNIDAD"
  },
- {
-  "value": "7593513001792",
-  "label": "CALABACIN FV"
- },
+ 
  {
   "value": "7595037000138",
   "label": "ACEITE DE PALMA RENDIACEITE 15LITROS"
@@ -2038,10 +1987,6 @@
  {
   "value": "7595815001128",
   "label": "SARDINAS EN SALSA DE TOMATE EL FARO 170GR"
- },
- {
-  "value": "7593513002584",
-  "label": "CAMBUR"
  },
  {
   "value": "7591985901619",
@@ -2060,20 +2005,12 @@
   "label": "SAL MARINA PARRILLERA LA VIÑA 200G"
  },
  {
-  "value": "7593513001815",
-  "label": "CEBOLLIN"
- },
- {
   "value": "7598678000147",
   "label": "YOGUR GRIEGO YOLO PLAIN 150GR"
  },
  {
   "value": "GARBANZO",
   "label": "GARBANZO DE 1\/2 KILO S\/M"
- },
- {
-  "value": "UVASPASAS",
-  "label": "PASAS UVAS POR PESO"
  },
  {
   "value": "038000284472",
@@ -2112,10 +2049,6 @@
   "label": "JAMON COCIDO PIERNA SUPERIOR PLUMROSE POR PESO"
  },
  {
-  "value": "7593513001853",
-  "label": "CHAYOTAS"
- },
- {
   "value": "337021",
   "label": "PALETA DE CERDO AHUMADA PLUMROSE POR PESO"
  },
@@ -2130,10 +2063,6 @@
  {
   "value": "7593513001822",
   "label": "CIBULLET"
- },
- {
-  "value": "7593513001860",
-  "label": "CILANTRO FV"
  },
  {
   "value": "7593513001884",
@@ -2228,10 +2157,6 @@
   "label": "VELA CUMPLEAÑOS ROJA UNIDAD "
  },
  {
-  "value": "7593513001945",
-  "label": "FRESAS PREMIUM FV POR PESO"
- },
- {
   "value": "7590099002168",
   "label": "COLONIA DE BEBE JONN 200CC "
  },
@@ -2272,20 +2197,12 @@
   "label": "CREMA DE LECHE PURISIMA 250GR"
  },
  {
-  "value": "7593513001969",
-  "label": "HIERBABUENA FV"
- },
- {
   "value": "7593513001976",
   "label": "HIGOS"
  },
  {
   "value": "7593513001983",
   "label": "HINOJO"
- },
- {
-  "value": "7593513001990",
-  "label": "JENGIBRE FV POR PESO"
  },
  {
   "value": "028000729707",
@@ -2302,10 +2219,6 @@
  {
   "value": "193968098827",
   "label": "VASOS DE COLORES MEMBER`S MARK POR UNIDAD"
- },
- {
-  "value": "7593513000252",
-  "label": "LECHUGA ROMANA FV POR PESO"
  },
  {
   "value": "7593513002553",
@@ -2348,10 +2261,6 @@
   "label": "AGUA MINERAL NEVADA 1.5L"
  },
  {
-  "value": "7593513002119",
-  "label": "PAPITA COLOMBIANA FV POR PESO"
- },
- {
   "value": "7591127221865",
   "label": "POWERADE MORA 500ML"
  },
@@ -2360,24 +2269,12 @@
   "label": "PEPINO FV"
  },
  {
-  "value": "7591202101259",
-  "label": "SALSA DE AJO EUREKA 150ML"
- },
- {
-  "value": "7593513002140",
-  "label": "PEREJIL FV"
- },
- {
   "value": "7597597004946",
   "label": "CAMPU ALIVE CABELLO GRASO 250ML"
  },
  {
   "value": "7702045395556",
   "label": "DESODORANTE BALANCE MEN TUBO 32GR"
- },
- {
-  "value": "7593513001112",
-  "label": "PIMENTON FV"
  },
  {
   "value": "7593513002157",
@@ -2400,14 +2297,6 @@
   "label": "POWERADE FRUTAS TROPICALES 500ML"
  },
  {
-  "value": "7593513002188",
-  "label": "REMOLACHA FV"
- },
- {
-  "value": "7593513002195",
-  "label": "REPOLLO BLANCO FV POR PESO"
- },
- {
   "value": "7591127251862",
   "label": "POWERADE MANDARINA 500ML"
  },
@@ -2418,10 +2307,6 @@
  {
   "value": "7591127853622",
   "label": "REFRESCO FRESCOLITA 2L"
- },
- {
-  "value": "7593513002232",
-  "label": "REPOLLO MORADO FV"
  },
  {
   "value": "8002062000037",
@@ -2446,10 +2331,6 @@
  {
   "value": "7593513005479",
   "label": "RUCULA"
- },
- {
-  "value": "7593513002270",
-  "label": "RUDA FV POR PESO"
  },
  {
   "value": "7593513000658",
@@ -2480,10 +2361,6 @@
   "label": "REFRESCO COCA COLA SABOR ORIGINAL 2L"
  },
  {
-  "value": "7593513001235",
-  "label": "TOMATE PERITA FV"
- },
- {
   "value": "7591127803658",
   "label": "REFRESCO COCA COLA LIGHT 2L"
  },
@@ -2510,10 +2387,6 @@
  {
   "value": "7501058640482",
   "label": "COLADOS GERBER DURAZNO 113GR"
- },
- {
-  "value": "7593513002317",
-  "label": "VAINITA CRIOLLA  FV POR PESO"
  },
  {
   "value": "7591031003557",
@@ -2568,10 +2441,6 @@
   "label": "CESTA PEQUEÑA"
  },
  {
-  "value": "7593513005486",
-  "label": "AUYAMA FV"
- },
- {
   "value": "7593251001092",
   "label": "SARDINAS EVEBA EN SALSA DE TOMATE 170GR"
  },
@@ -2588,16 +2457,8 @@
   "label": "PIOLO GANSITO AREQUIPE 34GR"
  },
  {
-  "value": "7593513002669",
-  "label": "BATATA FV"
- },
- {
   "value": "PECOPIMIENTADERILAC",
   "label": "QUESO PECORINO CON PIMIENTA DERILAC"
- },
- {
-  "value": "7593513004540",
-  "label": "CEBOLLA DE CABEZA FV"
  },
  {
   "value": "7509546677019",
@@ -2640,10 +2501,6 @@
   "label": "DE TODITO RESUELTO QUESO 320GR"
  },
  {
-  "value": "7593513004878",
-  "label": "GUANABANA FV POR PESO"
- },
- {
   "value": "PERRARINA",
   "label": "PERRARINA FILPO POR PESO"
  },
@@ -2654,10 +2511,6 @@
  {
   "value": "6970260680882",
   "label": "SARDINA EN SALSA DE TOMATE DI FIORE 155GR"
- },
- {
-  "value": "7593513005998",
-  "label": "GUAYABA FV"
  },
  {
   "value": "715126555012",
@@ -2678,10 +2531,6 @@
  {
   "value": "7591098460430",
   "label": "DON TOALLIN PAVECA 180H"
- },
- {
-  "value": "7593513006544",
-  "label": "MANDARINA NACIONAL FV"
  },
  {
   "value": "75920913",
@@ -2724,10 +2573,6 @@
   "label": "LECHE EN POLVO LOS ANDES 1KG"
  },
  {
-  "value": "7593513002652",
-  "label": "ÑAME FV"
- },
- {
   "value": "7591031001959",
   "label": "AGUA MINALBA 1.5L"
  },
@@ -2752,17 +2597,10 @@
   "label": "AGUA MINALBA 355ML"
  },
  {
-  "value": "7593513008883",
-  "label": "PARCHITA FV"
- },
- {
   "value": "7593513004441",
   "label": "PIMENTON DE INVERNADERO"
  },
- {
-  "value": "7593513002447",
-  "label": "PLATANO FV"
- },
+
  {
   "value": "7591031001980",
   "label": "AGUA MINALBA 600ML"
@@ -2794,10 +2632,6 @@
  {
   "value": "7591031005995",
   "label": "GATORADE FRUTAS TROPICALES 500ML"
- },
- {
-  "value": "7593513000993",
-  "label": "YUCA FV POR PESO"
  },
  {
   "value": "7591127804402",
@@ -3011,10 +2845,7 @@
   "value": "7593928000403",
   "label": "SALSA DE AJO DELICATESES NENIN"
  },
- {
-  "value": "4005808160266",
-  "label": "."
- },
+
  {
   "value": "7891000300602",
   "label": "NESCAFE ORIGINAL 200GR"
