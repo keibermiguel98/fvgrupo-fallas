@@ -65,17 +65,16 @@ const AddFallas = () => {
                       <Media className="align-items-center">
                         <a
                           className="avatar rounded-circle mr-3"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          href={!data.image ? "#" : data.image}
                         >
                           <img
                             alt="..."
-                            src={require("../../assets/img/theme/box.png")}
+                            src={require("../../assets/img/theme/picture.png")}
                           />
                         </a>
                         <Media>
                           <span className="mb-0 text-sm">
-                            {data.medicamentos}
+                            {data.producto}
                           </span>
                         </Media>
                       </Media>

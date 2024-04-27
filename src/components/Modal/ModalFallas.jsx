@@ -17,6 +17,7 @@ export const ModalFallas=(args)=>{
     const [producto, setProducto] = useState("")
     const [cantidadSugerida, setSugerida] = useState("")
     const [existencia, setExistencia] = useState("")
+    const [captador, setCaptador] = useState("")
     const [file,setFile] = useState('null')
     const [url,setUrl] = useState('')
 
@@ -25,7 +26,7 @@ export const ModalFallas=(args)=>{
      await uploadBytes(storageRef,file)
      const imageUrl = await getDownloadURL(storageRef)
      setUrl(imageUrl)
-     console.log(imageUrl)
+     console.log(url)
     }
 
     const handleGetInputProducto = (e)=>{
@@ -40,20 +41,24 @@ export const ModalFallas=(args)=>{
      setExistencia(e.target.value)
     }
 
+    const handleGetCaptador = (e)=>{
+      setCaptador(e.target.value)
+    }
+
     const handlePushDataFalla = async (e)=>{
       e.preventDefault()
        setModal(!modal)
        handlePushPhoto(file)
-      await addDoc(fallasCollection, 
+       await addDoc(fallasCollection, 
         {
          producto:producto,
          image: url,
          cantidadExistente: existencia, 
          cantidadSugerida:cantidadSugerida, 
          statusFallas:'Pendiente',
+         captador: captador,
          createAt: new Date()
-        })  
-        
+        })         
     }
 
     return(
@@ -71,6 +76,25 @@ export const ModalFallas=(args)=>{
                     <Col lg="12">
                         <FormGroup>
                           <Input type='file' onChange={e=>setFile(e.target.files[0])} />
+                        </FormGroup>
+                      </Col>
+
+                      <Col lg="12">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-captador"
+                          >
+                            Captador
+                          </label>
+                          <Input
+                            onChange={handleGetCaptador}
+                            value={captador}
+                            className="form-control-alternative"
+                            id="inputcaptador"
+                            placeholder="Nombre completo"
+                            type="text"
+                          />
                         </FormGroup>
                       </Col>
 
