@@ -2,7 +2,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col, FormGroup
 import React, { useState } from 'react';
 import { collection,addDoc } from 'firebase/firestore';
 import { database, app } from 'database/firebase';
-import { getStorage, ref, uploadBytes } from 'firebase/storage';
+import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
 
 const storage = getStorage(app)
@@ -18,10 +18,14 @@ export const ModalFallas=(args)=>{
     const [cantidadSugerida, setSugerida] = useState("")
     const [existencia, setExistencia] = useState("")
     const [file,setFile] = useState('null')
+    const [url,setUrl] = useState('')
 
     const handlePushPhoto = async (file)=>{
-     const storageRef = ref(storage,v4())
-     return await uploadBytes(storageRef,file)
+     const storageRef = ref(storage,'img-fallas/'+ v4())
+     await uploadBytes(storageRef,file)
+     const imageUrl = await getDownloadURL(storageRef)
+     setUrl(imageUrl)
+     console.log(imageUrl)
     }
 
     const handleGetInputProducto = (e)=>{
@@ -39,15 +43,17 @@ export const ModalFallas=(args)=>{
     const handlePushDataFalla = async (e)=>{
       e.preventDefault()
        setModal(!modal)
-    
+       handlePushPhoto(file)
       await addDoc(fallasCollection, 
-        {medicamentos:producto,
+        {
+         producto:producto,
+         image: url,
          cantidadExistente: existencia, 
          cantidadSugerida:cantidadSugerida, 
          statusFallas:'Pendiente',
          createAt: new Date()
         })  
-        handlePushPhoto(file)
+        
     }
 
     return(
