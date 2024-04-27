@@ -6635,10 +6635,6 @@
   "label": "ATUN NATURAL ARRECIFE 140GR"
  },
  {
-  "value": "PARRILLAFV",
-  "label": "PARRILLA GRANDE FV ZONA LOUNGE"
- },
- {
   "value": "7622201387334",
   "label": "WAFER SORBETICOS VAINILLA FAMILIAR 105G"
  },
@@ -6649,10 +6645,6 @@
  {
   "value": "PAVOLPRADO",
   "label": "PECHUGA DE PAVO SUPERIOR L PRADO"
- },
- {
-  "value": "CHORIZO-AJO",
-  "label": "CHORIZO DE AJO FV POR PESO"
  },
  {
   "value": "7896369618702",
@@ -6681,10 +6673,6 @@
  {
   "value": "816143090033",
   "label": "ACEITE PURO MAZOLA 40 FL OZ 1.18L"
- },
- {
-  "value": "CARPER",
-  "label": "PORCINO PERNIL FV POR PESO"
  },
  {
   "value": "8992725910431",
@@ -7122,10 +7110,7 @@
   "value": "2-0038",
   "label": "ESPARRAGOS AGRIMER"
  },
- {
-  "value": "2-0074",
-  "label": "REPOLLO CHINO FV POR PESO"
- },
+
  {
   "value": "7591206285221",
   "label": "PAPAS JACKS SABOR A POLLO 80GR"
@@ -7138,10 +7123,7 @@
   "value": "2-0081",
   "label": "TOMATE MANZANO AGRIMER"
  },
- {
-  "value": "2-0084",
-  "label": "ZANAHORIA FV POR PESO"
- },
+ 
  {
   "value": "7594005430250",
   "label": "CHULETA AHUMADA ALIMEX POR PESO"
@@ -7347,10 +7329,6 @@
   "label": "ALBONDIGAS DE SALMON FV POR PESO"
  },
  {
-  "value": "2-0040",
-  "label": "ESPINACA ITALIANA AGRIMER"
- },
- {
   "value": "8699009450156",
   "label": "VALE  AROMATIZANTE  ORQUIDIA  300ML"
  },
@@ -7373,10 +7351,6 @@
  {
   "value": "CARAMELOS",
   "label": "CARAMELOS BASTONES NAVIDEÑOS INDIVIDUAL"
- },
- {
-  "value": "RECARGA",
-  "label": "RECARGA DE AGUA FV "
  },
  {
   "value": "TAPABOCANEGRO",
@@ -7714,10 +7688,7 @@
   "value": "7702045557282",
   "label": "DESODORANTE BALANCE NORMAL 72H SOBRE UNIDAD"
  },
- {
-  "value": "20157921",
-  "label": "CHORIZO AHUMADO FV POR PESO"
- },
+ 
  {
   "value": "7591221714089",
   "label": "CUBITO HERVIDO CRIOLLO IBERIA 8 CUBITOS 96 GR"
