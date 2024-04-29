@@ -4,54 +4,66 @@ import { collection,addDoc } from 'firebase/firestore';
 import { database, app } from 'database/firebase';
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
-import Select from "react-select"
-import productos from '../../productos.json'
 const storage = getStorage(app)
 
 export const ModalFallas=(args)=>{
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
     const fallasCollection = collection(database, "fallas")
-    //const [filtrado,setFiltrado] = useState("")
 
     const [producto, setProducto] = useState("")
     const [captador, setCaptador] = useState("")
     const [falla,setFalla] = useState("")
-    const [file,setFile] = useState('null')
+    const [file,setFile] = useState('')
     const [url,setUrl] = useState('')
 
-    const handlePushPhoto = async (file)=>{
+    
+    const handleGetFile=(e)=>{
+      setFile(e.target.files[0])
+      console.log(file)
+    }
+
+    const handlePushPhoto = async ()=>{
      const storageRef = ref(storage,'img-fallas/'+ v4())
      await uploadBytes(storageRef,file)
      const imageUrl = await getDownloadURL(storageRef)
      setUrl(imageUrl)
     }
-  
-    //const handleGetProductos = (inputValue)=>{
-    //  const filtra = productos.filter((valor)=>valor.toLowerCase().includes(inputValue.toLowerCase()))
-     // setFiltrado(filtra)
-    //}
+
+   
+
+   // const loadOption = (inputValue, callback)=>{
+   //    setTimeout(()=>{
+    //    const filteredOption = productos.filter(option=>option.label.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()))
+    //    callback(filteredOption) 
+    //  },10000)
+   // }
+
     const handleGetInputFalla = (e)=>{
        setFalla(e.target.value)
     }
     const handleGetCaptador = (e)=>{
       setCaptador(e.target.value)
     }
+    const handleGetProducto = (e)=>{
+      setProducto(e.target.value)
+    }
+
 
     const handlePushDataFalla = async (e)=>{
       e.preventDefault()
        setModal(!modal)
        handlePushPhoto(file)
-       await addDoc(fallasCollection, 
-        {
-         codigo:"554",
-         producto:producto,
-         image: url,
-         tipoFalla: falla,
-         statusFallas:'Pendiente',
-         captador: captador,
-         createAt: `${new Date()}`
-        })         
+         await addDoc(fallasCollection, 
+          {
+           producto:producto,
+           image: url,
+           tipoFalla: falla,
+           statusFallas:'Pendiente',
+           captador: captador,
+           createAt: `${new Date()}`
+          },3000)   
+          
     }
 
     return(
@@ -68,7 +80,7 @@ export const ModalFallas=(args)=>{
 
                     <Col lg="12">
                         <FormGroup>
-                          <Input type='file' onChange={e=>setFile(e.target.files[0])} />
+                          <Input type='file' className='form-control' onChange={handleGetFile} />
                         </FormGroup>
                       </Col>
 
@@ -81,12 +93,14 @@ export const ModalFallas=(args)=>{
                             Producto
                           </label>
 
-                          <Select 
-                           //options={loadOption} 
-                           options={productos}
-                           onChange={(e)=>setProducto(e.label)}
-                          // filterOption={handleGetProductos}
-                           />
+                          <Input
+                            onChange={handleGetProducto}
+                            value={producto}
+                            className="form-control"
+                            id="inputProducto"
+                            placeholder="Producto"
+                            type="text"
+                          />
                         </FormGroup>
                       </Col>
 

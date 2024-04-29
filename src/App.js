@@ -19,16 +19,20 @@ const App = () => {
     //  dispatch(addAuth(usuarioFirebase))
    // })
     
-   //<Route path="/auth/*" element={<AuthLayout/>} />       
+   //<Route path="/auth/*" element={<AuthLayout/>} />     
+   
+   
+   
 
     return (
        <BrowserRouter>
          <Routes>
-          <Route path="/admin/*" element={<AdminLayout />} />
-          <Route path="/admin/profile" element={<Profile/>}/>
           <Route path="/admin/productos/new-product" element={<ProductosAdd/>}/>
-          <Route path="*" element={
-          <Navigate to="/admin/index" replace />}/>
+           <Route path="*" element={
+           <Navigate to="/admin/index" replace />}/>
+            <Route path="/admin/*" element={<AdminLayout />} />
+            <Route path="/admin/profile" element={<Profile/>}/>
+        
       </Routes>
     </BrowserRouter>
   )}

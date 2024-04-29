@@ -5,13 +5,13 @@ import Productos from "views/examples/Productos";
 //import Login from "views/examples/Login";
 
 var routes = [
-  {
-    path: "/index",
-    name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
-    component: <Index />,
-    layout: "/admin",
-  },
+//  {
+ //   path: "/index",
+  //  name: "Dashboard",
+   // icon: "ni ni-tv-2 text-primary",
+   // component: <Index />,
+  //  layout: "/admin",
+ // },
   {
     path: "/Addfallas",
     name: "Fallas",
@@ -20,13 +20,13 @@ var routes = [
     layout: "/admin",
   },
 
-  {
-    path: "/productos",
-    name: "Productos",
-    icon: "ni ni-box-2 text-info",
-    component: <Productos />,
-    layout: "/admin",
-  },
+ // {
+  //  path: "/productos",
+ //   name: "Productos",
+   // icon: "ni ni-box-2 text-info",
+   // component: <Productos />,
+   // layout: "/admin",
+ // },
  // {
   //  path: "/users",
   //  name: "Usuarios",

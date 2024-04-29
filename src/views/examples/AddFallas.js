@@ -9,7 +9,7 @@ import {
   Media,
   Table,
   Container,
-  Row,
+  Row
 } from "reactstrap";
 // core components
 import HeaderFallas from "components/Headers/HeaderFallas.js";
@@ -20,7 +20,11 @@ import { useEffect, useState } from "react";
 
 const AddFallas = () => {
 
+  const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
   const [fallas,setFallas] = useState([])
+  const [photo,setPhoto] = useState('')
 
   const fallasCollection = collection(database, "fallas")
 
@@ -33,6 +37,7 @@ const AddFallas = () => {
   useEffect(()=>{
    getFallas()
   },[])
+
 
   return (
     <> 
@@ -62,6 +67,7 @@ const AddFallas = () => {
                     <th scope="row">
                       <Media className="align-items-center">
                         <a
+                          onClick={toggle}
                           className="avatar rounded-circle mr-3"
                           href={!data.image ? "#" : data.image}
                         >
