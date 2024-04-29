@@ -14,16 +14,11 @@ export const ModalFallas=(args)=>{
     const [producto, setProducto] = useState("")
     const [captador, setCaptador] = useState("")
     const [falla,setFalla] = useState("")
-    const [file,setFile] = useState('')
     const [url,setUrl] = useState('')
 
-    
-    const handleGetFile=(e)=>{
-      setFile(e.target.files[0])
-      console.log(file)
-    }
 
-    const handlePushPhoto = async ()=>{
+
+    const handlePushPhoto = async (file)=>{
      const storageRef = ref(storage,'img-fallas/'+ v4())
      await uploadBytes(storageRef,file)
      const imageUrl = await getDownloadURL(storageRef)
@@ -53,7 +48,6 @@ export const ModalFallas=(args)=>{
     const handlePushDataFalla = async (e)=>{
       e.preventDefault()
        setModal(!modal)
-       handlePushPhoto(file)
          await addDoc(fallasCollection, 
           {
            producto:producto,
@@ -62,7 +56,7 @@ export const ModalFallas=(args)=>{
            statusFallas:'Pendiente',
            captador: captador,
            createAt: `${new Date()}`
-          },3000)   
+          })   
           
     }
 
@@ -80,7 +74,7 @@ export const ModalFallas=(args)=>{
 
                     <Col lg="12">
                         <FormGroup>
-                          <Input type='file' className='form-control' onChange={handleGetFile} />
+                          <Input type='file' className='form-control' onChange={(e)=>handlePushPhoto(e.target.files[0])} />
                         </FormGroup>
                       </Col>
 
