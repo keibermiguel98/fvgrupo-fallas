@@ -4,6 +4,7 @@ import AdminLayout from "layouts/Admin.js";
 //import AuthLayout from "layouts/Auth.js";
 import Profile from "views/examples/Profile";
 import ProductosAdd from "views/examples/ProductosAdd";
+import AddFallas from 'views/examples/AddFallas';
 //import { app } from 'database/firebase';
 //import { getAuth, onAuthStateChanged} from '@firebase/auth';
 //import { useDispatch, useSelector } from 'react-redux';
@@ -19,19 +20,16 @@ const App = () => {
     //  dispatch(addAuth(usuarioFirebase))
    // })
     
-   //<Route path="/auth/*" element={<AuthLayout/>} />     
-   
-   
-   
+   //<Route path="/auth/*" element={<AuthLayout/>} />       
+  //   <Route path="/admin/productos/new-product" element={<ProductosAdd/>}/>
 
     return (
        <BrowserRouter>
          <Routes>
-          <Route path="/admin/productos/new-product" element={<ProductosAdd/>}/>
-           <Route path="*" element={
-           <Navigate to="/admin/index" replace />}/>
-            <Route path="/admin/*" element={<AdminLayout />} />
-            <Route path="/admin/profile" element={<Profile/>}/>
+          <Route path="/admin/*" element={<AdminLayout />} />
+          <Route path="/admin/profile" element={<AddFallas/>}/>
+          <Route path="*" element={
+          <Navigate to="/admin/Addfallas" replace />}/>
         
       </Routes>
     </BrowserRouter>
