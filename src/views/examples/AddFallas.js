@@ -9,7 +9,8 @@ import {
   Media,
   Table,
   Container,
-  Row
+  Row,
+  Button
 } from "reactstrap";
 // core components
 import HeaderFallas from "components/Headers/HeaderFallas.js";
@@ -24,8 +25,6 @@ const AddFallas = () => {
     const toggle = () => setModal(!modal);
 
   const [fallas,setFallas] = useState([])
-  const [photo,setPhoto] = useState('')
-
   const fallasCollection = collection(database, "fallas")
 
   const getFallas = async ()=>{
@@ -34,27 +33,30 @@ const AddFallas = () => {
     fails.docs.map((doc)=>({...doc.data(), id:doc.id}))
    )}
 
-  useEffect(()=>{
-   getFallas()
-  },[])
+   useEffect(()=>{
+     getFallas()
+   },[])
 
 
   return (
     <> 
-      <HeaderFallas />
+      <HeaderFallas/>
       <Container className="mt--7" fluid>
         <Row>
           <div className="col">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <h3 className="mb-0">Listado de fallas</h3>
-                <ModalFallas />
-               
+                <ModalFallas getFallas={getFallas}/>
+                <Button color="secondary" onClick={getFallas} 
+                 className="m-2"><i className="ni ni-spaceship"></i></Button>
+
               </CardHeader>
+             
               <Table className="align-items-center table-flush" responsive hover>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col">PRODUCTO</th>
+                    <th scope="col"> PRODUCTO</th>
                     <th scope="col">TIPO DE FALLA</th>
                     <th scope="col">STATUS</th>
                     <th scope="col">CAPTADOR</th>

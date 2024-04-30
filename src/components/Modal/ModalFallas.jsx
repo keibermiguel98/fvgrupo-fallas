@@ -1,12 +1,12 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col, FormGroup, Input } from 'reactstrap';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { collection,addDoc } from 'firebase/firestore';
 import { database, app } from 'database/firebase';
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
 const storage = getStorage(app)
 
-export const ModalFallas=(args)=>{
+export const ModalFallas=({getFallas,args})=>{
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
     const fallasCollection = collection(database, "fallas")
@@ -57,7 +57,7 @@ export const ModalFallas=(args)=>{
            captador: captador,
            createAt: `${new Date()}`
           })   
-          
+        getFallas()     
     }
 
     return(

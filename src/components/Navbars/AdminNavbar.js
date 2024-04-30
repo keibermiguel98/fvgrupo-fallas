@@ -48,7 +48,7 @@ const AdminNavbar = (props) => {
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
                 <Media className="align-items-center">
-                  <span className="avatar avatar-sm rounded-circle">
+                  <span className="avatar avatar-md rounded-circle">
                     <img
                       alt="..."
                       src={require("../../assets/img/theme/team-4-800x800.jpg")}
