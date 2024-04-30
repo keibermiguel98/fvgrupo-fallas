@@ -219,7 +219,7 @@ const Sidebar = (props) => {
             <NavItem>
               <NavLink>
                 <i className="ni ni-palette" />
-                Sobre nosotros
+                Sobre Nosotros
               </NavLink>
             </NavItem>
           </Nav>
