@@ -2,10 +2,6 @@ import {
   Badge,
   Card,
   CardHeader,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
   Media,
   Table,
   Container,
@@ -15,9 +11,10 @@ import {
 // core components
 import HeaderFallas from "components/Headers/HeaderFallas.js";
 import { ModalFallas } from "components/Modal/ModalFallas";
-import {collection, getDocs, getDoc,deleteDoc} from 'firebase/firestore'
+import {collection, getDocs} from 'firebase/firestore'
 import {database} from 'database/firebase.js'
 import { useEffect, useState } from "react";
+import { ButtonOption } from "components/Buttons/ButtonOption";
 
 const AddFallas = () => {
 
@@ -52,14 +49,13 @@ const AddFallas = () => {
                  className="m-2"><i className="ni ni-spaceship"></i></Button>
 
               </CardHeader>
-             
-              <Table className="align-items-center table-flush" responsive hover>
+              <Table className="align-items-center table-striped" responsive hover>
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col"> PRODUCTO</th>
-                    <th scope="col">TIPO DE FALLA</th>
+                    <th scope="col">PRODUCTO</th>
                     <th scope="col">STATUS</th>
                     <th scope="col">CAPTADOR</th>
+                    <th scope="col">TIPO DE FALLA</th>
                     <th scope="col" />
                   </tr>
                 </thead>
@@ -79,19 +75,15 @@ const AddFallas = () => {
                           />
                         </a>
                         <Media>
-                          <span className="mb-0 text-sm">
-                            {data.producto}
+                          <span className="mb-0">
+                            {data.producto } 
                           </span>
                         </Media>
                       </Media>
                     </th>
-
-                    <td>{data.tipoFalla}</td>
-
+                  
                     <td>
-                    <Badge color="primary" pill>
-                      {data.statusFallas}
-                    </Badge>
+                    {data.statusFallas === 'En transito' ? <Badge color="warning" pill>{data.statusFallas}</Badge>:  data.statusFallas === 'Recepcionado' ? <Badge color="success" pill>{data.statusFallas}</Badge> : <Badge color="info" pill>{data.statusFallas}</Badge>}                  
                     </td>
 
                     <td>
@@ -100,45 +92,13 @@ const AddFallas = () => {
                       </div>
                     </td>
 
-
+                    <td>{data.tipoFalla}</td>  
                     <td className="text-right">
-                      <UncontrolledDropdown>
-                        <DropdownToggle
-                          className="btn-icon-only text-light"
-                          href="#pablo"
-                          role="button"
-                          size="sm"
-                          color=""
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          <i className="fas fa-ellipsis-v" />
-                        </DropdownToggle>
-                        <DropdownMenu className="dropdown-menu-arrow" right>
-                          <DropdownItem
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Pedido
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Fuera del mercado
-                          </DropdownItem>
-                          <DropdownItem
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                          >
-                            Agotado
-                          </DropdownItem>
-                        </DropdownMenu>
-                      </UncontrolledDropdown>
+                       <ButtonOption id={data.id} getFallas={getFallas}/>
                     </td>
                     </tr>
-
                     ))
-                        }
+                     }
             
                 </tbody>
               </Table>

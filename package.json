@@ -53,6 +53,7 @@
     "react-select": "^5.8.0",
     "reactstrap": "8.10.0",
     "sass": "1.69.5",
+    "sweetalert": "^2.1.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
