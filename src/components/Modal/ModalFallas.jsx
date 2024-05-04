@@ -1,5 +1,5 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col, FormGroup, Input } from 'reactstrap';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { collection,addDoc } from 'firebase/firestore';
 import { database, app } from 'database/firebase';
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
@@ -90,7 +90,7 @@ export const ModalFallas=({getFallas,args})=>{
                           <Input
                             onChange={handleGetProducto}
                             value={producto}
-                            className="form-control"
+                            className={producto===""? 'form-control border-danger':'form-control border-success' }
                             id="inputProducto"
                             placeholder="Producto"
                             type="text"
@@ -109,7 +109,7 @@ export const ModalFallas=({getFallas,args})=>{
                           <Input
                             onChange={handleGetCaptador}
                             value={captador}
-                            className="form-control"
+                            className={captador===""? 'form-control border-danger':'form-control border-success' }
                             id="inputcaptador"
                             placeholder="Nombre completo"
                             type="text"
@@ -128,7 +128,7 @@ export const ModalFallas=({getFallas,args})=>{
                             Tipo de falla(*)
                           </label>
                         
-                          <select className="form-control" value={falla} onChange={handleGetInputFalla}>
+                          <select className={falla===""? 'form-control border-danger':'form-control border-success' } value={falla} onChange={handleGetInputFalla}>
                               <option value="#">Seleccionar..</option>
                               <option value="Sin existencia" className='text-danger'>Sin existencia</option>
                               <option value="Poca existencia" className='text-primary'>Poca existencia</option>
@@ -140,7 +140,7 @@ export const ModalFallas=({getFallas,args})=>{
                   </div>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={handlePushDataFalla}>
+          <Button color="primary" onClick={handlePushDataFalla} className={producto  === '' ? 'disabled' : captador === '' ? 'disabled' : falla === '' ? 'disabled': '' }>
             Enviar falla
           </Button>{''}
           <Button color="secondary" onClick={toggle}>
