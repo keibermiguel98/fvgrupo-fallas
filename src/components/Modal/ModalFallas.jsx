@@ -16,23 +16,12 @@ export const ModalFallas=({getFallas,args})=>{
     const [falla,setFalla] = useState("")
     const [url,setUrl] = useState('')
 
-
-
     const handlePushPhoto = async (file)=>{
      const storageRef = ref(storage,'img-fallas/'+ v4())
      await uploadBytes(storageRef,file)
      const imageUrl = await getDownloadURL(storageRef)
      setUrl(imageUrl)
     }
-
-   
-
-   // const loadOption = (inputValue, callback)=>{
-   //    setTimeout(()=>{
-    //    const filteredOption = productos.filter(option=>option.label.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()))
-    //    callback(filteredOption) 
-    //  },10000)
-   // }
 
     const handleGetInputFalla = (e)=>{
        setFalla(e.target.value)
