@@ -1,7 +1,8 @@
 import { DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from "reactstrap"
 import {deleteDoc, doc, updateDoc} from 'firebase/firestore'
 import {database} from 'database/firebase.js'
-import swal from 'sweetalert';
+import Swal from 'sweetalert';
+import swal from 'sweetalert2'
 
 export const ButtonOption = ({id,getFallas}) => {
 
@@ -9,57 +10,81 @@ export const ButtonOption = ({id,getFallas}) => {
   const deleteRef = doc(database,'fallas',id)
 
   const onDeletePedido = ()=>{
-    swal("Contraseña", {
-      content: "input"
+    swal.fire({
+      title:"Password",
+      input: "password",
     })
-    .then((value) => {
-      if(value === 'fvgrupobodegon2203'){
+    .then((result) => {
+      if(result.value === 'fv2203'){
           deleteDoc(deleteRef).then(()=>{
+          getFallas()
           console.log('se ha modificado correctamente!')
         }).catch(()=>{
           console.log('No se logro cambiar el status. Si el problema persiste por favor comunicarse con soporte tecnico!')
         })
-        getFallas()
-        swal("Perfecto!✅", "El registro se ha eliminado!", "success");
+        Swal("Perfecto!✅", "El registro se ha eliminado!", "success");
       }else{
-        swal("Lo sentimos!❌", "No se pudo eliminar la colleccion. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
+        Swal("Lo sentimos!❌", "No se pudo eliminar la colleccion. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
       }
     });  
 }
- //Cambio se ha realizado correctamente!
-  const onChangeRecepcionado = ()=>{
-      swal("Contraseña", {
-        content: "input"
-      })
-      .then((value) => {
-        if(value === 'fvgrupobodegon2203'){
+
+ const onChangeRecepcionado = ()=>{
+    swal.fire({
+      title:"Password",
+      input: "password",
+    })
+      .then((result) => {
+        if(result.value === 'fv2203'){
           updateDoc(docRef,{statusFallas:'Recepcionado'}).then(()=>{ 
+            getFallas()
             console.log('se ha modificado correctamente!')
           }).catch(()=>{
             console.log('No se logro cambiar el status. Si el problema persiste por favor comunicarse con soporte tecnico!')
           })
-          getFallas()
-          swal("Perfecto!✅", "Su registro ha cambiado > *Recepcionado*", "success");
+          Swal("Perfecto!✅", "Su registro ha cambiado > *Recepcionado*", "success");
         }else{
-          swal("Lo sentimos!❌", "No se pudo cambiar el status. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
+          Swal("Lo sentimos!❌", "No se pudo cambiar el status. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
         }
       });  
 }
-    const onChangeTransito = ()=>{
-  swal("Contraseña", {
-    content: "input"
-  })
-  .then((value) => {
-    if(value === 'fvgrupobodegon2203'){
-      updateDoc(docRef,{statusFallas:'En transito'}).then(()=>{ 
+
+ const onChangeSinRotacion = ()=>{
+    swal.fire({
+      title:"Password",
+      input: "password",
+    })
+  .then((result) => {
+    if(result.value === 'fv2203'){
+      updateDoc(docRef,{statusFallas:'Sin Rotacion'}).then(()=>{ 
+        getFallas()
         console.log('se ha modificado correctamente!')
       }).catch(()=>{
         console.log('No se logro cambiar el status. Si el problema persiste por favor comunicarse con soporte tecnico!')
       })
-      getFallas()
-      swal("Perfecto!✅", "Su registro ha cambiado > *En transito*", "success");
+      Swal("Perfecto!✅", "Su registro ha cambiado > *Sin rotacion*", "success");
     }else{
-      swal("Lo sentimos!❌", "No se pudo cambiar el status. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
+      Swal("Lo sentimos!❌", "No se pudo cambiar el status. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
+    }
+  });  
+}
+
+ const onChangeTransito = ()=>{
+    swal.fire({
+      title:"Password",
+      input: "password",
+    })
+  .then((result) => {
+    if(result.value === 'fv2203'){
+      updateDoc(docRef,{statusFallas:'En transito'}).then(()=>{ 
+        getFallas()
+        console.log('se ha modificado correctamente!')
+      }).catch(()=>{
+        console.log('No se logro cambiar el status. Si el problema persiste por favor comunicarse con soporte tecnico!')
+      })
+      Swal("Perfecto!✅", "Su registro ha cambiado > *En transito*", "success");
+    }else{
+      Swal("Lo sentimos!❌", "No se pudo cambiar el status. Si el problema persiste comunicate con el Departamento de Informatica!", "error");
     }
   });  
 }
@@ -70,7 +95,6 @@ export const ButtonOption = ({id,getFallas}) => {
     <UncontrolledDropdown>
             <DropdownToggle
               className="btn-icon-only text-light"
-              href="#"
               role="button"
               size="sm"
               color=""
@@ -79,20 +103,23 @@ export const ButtonOption = ({id,getFallas}) => {
             </DropdownToggle>
             <DropdownMenu className="dropdown-menu-arrow" right>
               <DropdownItem
-                href="#"
                 onClick={() => onChangeTransito()}
               >
                 En transito
               </DropdownItem>
               <DropdownItem
-                href="#"
                 onClick={() => onChangeRecepcionado()}
               >
                 Recepcionado
               </DropdownItem>
+
+              <DropdownItem
+                onClick={() => onChangeSinRotacion()}
+              >
+                Poca rotacion
+              </DropdownItem>
             
               <DropdownItem
-                href="#"
                 onClick={() => onDeletePedido()}
               >
                 Quitar

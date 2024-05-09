@@ -44,7 +44,7 @@ const AddFallas = () => {
             <Card className="shadow">
               <CardHeader className="border-0">
                 <h3 className="mb-0">Listado de fallas</h3>
-                <ModalFallas getFallas={getFallas}/>
+                <ModalFallas getFallas={getFallas} fallas={fallas}/>
                 <Button color="secondary" onClick={getFallas} 
                  className="m-2"><i className="ni ni-spaceship"></i></Button>
 
@@ -83,7 +83,7 @@ const AddFallas = () => {
                     </th>
                   
                     <td>
-                    {data.statusFallas === 'En transito' ? <Badge color="warning" pill>{data.statusFallas}</Badge>:  data.statusFallas === 'Recepcionado' ? <Badge color="success" pill>{data.statusFallas}</Badge> : <Badge color="info" pill>{data.statusFallas}</Badge>}                  
+                    {data.statusFallas === 'En transito' ? <Badge color="warning" pill>{data.statusFallas}</Badge>:  data.statusFallas === 'Recepcionado' ? <Badge color="success" pill>{data.statusFallas}</Badge> :  data.statusFallas === 'Pendiente' ? <Badge color="info" pill>{data.statusFallas}</Badge> : <Badge color="default" pill>{data.statusFallas}</Badge> }                  
                     </td>
 
                     <td>

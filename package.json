@@ -54,6 +54,7 @@
     "reactstrap": "8.10.0",
     "sass": "1.69.5",
     "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.10.8",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

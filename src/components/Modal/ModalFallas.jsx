@@ -4,6 +4,9 @@ import { collection,addDoc } from 'firebase/firestore';
 import { database, app } from 'database/firebase';
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
+import swal from 'sweetalert2'
+import ReactSelect from 'react-select';
+
 const storage = getStorage(app)
 
 export const ModalFallas=({getFallas,args})=>{
@@ -46,7 +49,17 @@ export const ModalFallas=({getFallas,args})=>{
            captador: captador,
            createAt: `${new Date()}`
           })   
-        getFallas()     
+        getFallas()  
+        swal.fire({
+          icon:'success',
+          title: 'Grandioso🔥',
+          text:"Su falla fue enviada con exito!"
+        })   
+
+        setProducto("")
+        setCaptador("")
+        setFalla("")
+        setUrl("")
     }
 
     return(
@@ -119,8 +132,8 @@ export const ModalFallas=({getFallas,args})=>{
                         
                           <select className={falla===""? 'form-control border-danger':'form-control border-success' } value={falla} onChange={handleGetInputFalla}>
                               <option value="#">Seleccionar..</option>
-                              <option value="Sin existencia" className='text-danger'>Sin existencia</option>
-                              <option value="Poca existencia" className='text-primary'>Poca existencia</option>
+                              <option value="Sin existencia">Sin existencia</option>
+                              <option value="Poca existencia">Poca existencia</option>
                           </select>
                         </FormGroup>
                       </Col>
