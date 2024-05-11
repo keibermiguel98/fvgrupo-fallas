@@ -5,11 +5,11 @@ import { database, app } from 'database/firebase';
 import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
 import swal from 'sweetalert2'
-import ReactSelect from 'react-select';
+import { InputSelectFallas } from 'components/InputSelect/InputSelectFallas';
 
 const storage = getStorage(app)
 
-export const ModalFallas=({getFallas,args})=>{
+export const ModalFallas=({getFallas,fallas,args})=>{
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
     const fallasCollection = collection(database, "fallas")
@@ -32,10 +32,6 @@ export const ModalFallas=({getFallas,args})=>{
     const handleGetCaptador = (e)=>{
       setCaptador(e.target.value)
     }
-    const handleGetProducto = (e)=>{
-      setProducto(e.target.value)
-    }
-
 
     const handlePushDataFalla = async (e)=>{
       e.preventDefault()
@@ -89,14 +85,7 @@ export const ModalFallas=({getFallas,args})=>{
                             Producto
                           </label>
 
-                          <Input
-                            onChange={handleGetProducto}
-                            value={producto}
-                            className={producto===""? 'form-control border-danger':'form-control border-success' }
-                            id="inputProducto"
-                            placeholder="Producto"
-                            type="text"
-                          />
+                          <InputSelectFallas fallas={fallas} setProducto={setProducto} producto={producto} />
                         </FormGroup>
                       </Col>
 

@@ -15,8 +15,19 @@ import {collection, getDocs} from 'firebase/firestore'
 import {database} from 'database/firebase.js'
 import { useEffect, useState } from "react";
 import { ButtonOption } from "components/Buttons/ButtonOption";
+import { ButtonEmergentes } from "components/Buttons/ButtonEmergente";
 
 const AddFallas = () => {
+
+  const [seletedRow,setSelectedRows] = useState([]);
+
+  const handleCheckBoxChange = (id)=>{
+    if(seletedRow.includes(id)){
+      setSelectedRows(seletedRow.filter(rowid=>rowid!==id))
+    }else{
+      setSelectedRows([...seletedRow,id])
+    }
+  }
 
   const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -47,11 +58,12 @@ const AddFallas = () => {
                 <ModalFallas getFallas={getFallas} fallas={fallas}/>
                 <Button color="secondary" onClick={getFallas} 
                  className="m-2"><i className="ni ni-spaceship"></i></Button>
-
+                  <ButtonEmergentes getFallas={getFallas} seletedRow={seletedRow} setSelectedRows={setSelectedRows} />
               </CardHeader>
               <Table className="align-items-center table-striped" responsive hover>
                 <thead className="thead-light">
                   <tr>
+                  <th scope="col" />
                     <th scope="col">PRODUCTO</th>
                     <th scope="col">STATUS</th>
                     <th scope="col">CAPTADOR</th>
@@ -62,6 +74,13 @@ const AddFallas = () => {
                 <tbody>
                   { fallas.map((data)=>(                      
                     <tr key={data.id}>
+                    <th>
+                      <input
+                       type="checkbox"
+                       onChange={()=>handleCheckBoxChange(data.id)}
+                       checked={seletedRow.includes(data.id)}
+                      />
+                    </th>
                     <th scope="row">
                       <Media className="align-items-center">
                         <a
